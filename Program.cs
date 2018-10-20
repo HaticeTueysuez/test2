@@ -14,7 +14,7 @@ namespace test2
         public static String GetRomanNumber(int number) 
         {
             if ((number <= 0) || (number > 999) )
-                return "Eingabe ausserhalb des Wertebereichs!!!";
+                return "Eingabe ausserhalb des Wertebereichs";
             
             StringBuilder Ergebnis = new StringBuilder();
 
