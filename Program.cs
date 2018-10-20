@@ -7,28 +7,35 @@ namespace test2
     {
         static void Main(string[] args)
         {
+            int inputNumber = Int32.Parse(args[0]);
+            Console.WriteLine(GetRomanNumber(inputNumber));
+        }
+            
+        public static String GetRomanNumber(int number) 
+        {
+            if ((number <= 0) || (number > 999) )
+                return "Eingabe ausserhalb des Wertebereichs!!!";
+            
             StringBuilder Ergebnis = new StringBuilder();
 
-            int number      = 11    ;
             string snumber  = Convert.ToString(number); // Konvertiert den Typ integer in einen Typ String
 
-            int[] valueHunderter    = {100, 400, 500, 900, 1000};  
-            string[] romanHunderter = {"C", "CD", "D", "CM", "M"};  
+            int[] valueHunderter    = {100, 400, 500, 900, 1000}; 
+            string[] romanHunderter = {"C", "CD", "D", "CM", "M"};
 
             int[] valueZehner       = {10, 40, 50, 90};
             string[] romanZehner    = {"X", "XL", "L", "XC"};
 
             int[] valueEinser       = {1, 4, 5, 9};
             string[] romanEinser    = {"I", "IV", "V", "IX"};
-            
 
             // Überprüfe ob die Zahl im Hunderter Bereich ist
             if(snumber.Length == 3)
             {
-                while(number > 100)
+                while(number >= 100)
                 {
                      // Ausgabe von der Hunderter Zahl
-                    for (int i = valueHunderter.Length - 1; i >= 0; i--)
+                    for (int i = valueHunderter.Length - 1; i >= 0; i--) //-1 weil array mit 0 anfängt, fängt bei der 4ten stelle an mit der for schleife 
                         if (number / valueHunderter[i] >= 1)
                         {
                             number = number - valueHunderter[i];
@@ -38,12 +45,10 @@ namespace test2
                 }
             }
 
-
-
              // Überprüfe ob die Zahl im Zehner Bereich ist
             if(snumber.Length >= 2) 
             {
-                while(number > 10)
+                while(number >= 10)
                 {
                     // Ausgabe von der Zehner Zahl
                     for (int i = valueZehner.Length - 1; i >= 0; i--)
@@ -72,9 +77,8 @@ namespace test2
                         }  
                 }
             }
-
-            Console.WriteLine(Ergebnis);
-
+            return Ergebnis.ToString();
         }
+        
     }
 } 
