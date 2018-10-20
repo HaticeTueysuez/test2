@@ -35,7 +35,7 @@ namespace test2
                 while(number >= 100)
                 {
                      // Ausgabe von der Hunderter Zahl
-                    for (int i = valueHunderter.Length - 1; i >= 0; i--) //-1 weil array mit 0 anfängt, fängt bei der 4ten stelle an mit der for schleife 
+                    for (int i = valueHunderter.Length - 1; i >= 0; i--) 
                         if (number / valueHunderter[i] >= 1)
                         {
                             number = number - valueHunderter[i];
