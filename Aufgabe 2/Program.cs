@@ -7,31 +7,32 @@ namespace Aufgabe_2
     {
         static void Main(string[] args)
         {
-            
-/*        var i = 42;
+/*        
+        //Initialisierung
+        var i = 42;
         var pi = 3.1415;
         var salute = "Hello, World";
 
         var variable = 0;
         Console.WriteLine(variable);
-//__________________________________________________________//
+
         
+        //Arrays
         int[] ia = {1, 0, 2, 9, 3, 8, 4, 7, 5, 6};
         int ergebnis = ia[2] * ia[8] + ia[4];
 
         Console.WriteLine(ergebnis);
         Console.WriteLine(ia.Length);
-//__________________________________________________________//
 
         double[] da = new double [3];
         da[0] = 3.1415;
         da[1] = 2.718281828459;
-        da[2] = 2;
+        da[2] = 2.97*(10^-19;
 
         Console.WriteLine(da.Length);
 
-//__________________________________________________________//
 
+        //Strings
         string meinString = "Dies ist ein String";
         char zeichen = meinString[5];
 
@@ -44,9 +45,9 @@ namespace Aufgabe_2
         Console.WriteLine(c);
         Console.WriteLine(a_eq_c);
 
-//_________________________________________________________//
 
-
+        //Verzweigungen
+        //if/else
         int zahl1 = int.Parse(Console.ReadLine());
         int zahl2 = int.Parse(Console.ReadLine());
 
@@ -59,9 +60,10 @@ namespace Aufgabe_2
         {
             Console.WriteLine("Leider verloren");
         }
-//________________________________________________________//    
 
-        //int m = int.Parse(Console.ReadLine());
+
+        //switch-case
+        int m = int.Parse(Console.ReadLine());
         string m = Console.ReadLine();
         switch (m)
         {
@@ -80,9 +82,8 @@ namespace Aufgabe_2
             default:
                 Console.WriteLine("Die Zahl " + m + " kenne ich nicht");
                 break;
-}
+        }
 
-//_________________________________________________________//  
 
         string m = Console.ReadLine();
 
@@ -108,8 +109,9 @@ namespace Aufgabe_2
             Console.WriteLine("Die Zahl " + m + " kenne ich nicht");
         }
 
-//______________________________________________________//   
-
+ 
+        //Schleifen
+        //while-Schleife
         int[] zahlen={1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
         int x=0;
         while (x <10)
@@ -117,8 +119,9 @@ namespace Aufgabe_2
             Console.WriteLine(zahlen[x].ToString());
             x++;
         }
-//______________________________________________________// */
-        
+
+
+        //for-Schleife
         string[] someStrings = 
         {
             "Hier",
@@ -131,41 +134,48 @@ namespace Aufgabe_2
         };
         
         
-        /* for (int i = 0; i < someStrings.Length; i++)
+        for (int i = 0; i < someStrings.Length; i++)
         {
             Console.WriteLine(someStrings[i]);
-        }*/
+        }
         
         
-        /* int i = 0;
+        int i = 0;
         while (i < someStrings.Length)
         {
             Console.WriteLine(someStrings[i].ToString());
             i++;
-        }*/
+        }
 
-        /* int i = 0;
+
+        //do-while
+        int i = 0;
         do 
         {
             Console.WriteLine(someStrings[i]);
             i++;
         }
-        while (i < someStrings.Length);*/
+        while (i < someStrings.Length);
 
-        /* int i = 0;
+
+        //break
+        int i = 0;
         while (true)
         {
             Console.WriteLine(someStrings[i]);
             if (i >= someStrings.Length)
                 break;
             i++;
-        }*/
+        }
 
+
+        //foreach
         foreach (string s in someStrings)
         {
             Console.WriteLine(s);
         }
 
+*/ 
         }
     }
 }
